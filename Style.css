@@ -4,7 +4,7 @@ body {
 }
 
 table {
-    width: 50%;
+    width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
 }
@@ -12,4 +12,37 @@ table {
 th, td {
     border: 1px solid black;
     padding: 10px;
+    text-align: center;
 }
+
+td {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+td:hover {
+    background-color: #ddd;
+}
+
+/* Baseball Diamond */
+#diamond {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.base {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+}
+
+.base1 { left: 75px; bottom: 0; } /* First base */
+.base2 { right: 0; top: 75px; }  /* Second base */
+base3 { left: 0; top: 75px; }   /* Third base */
+.home { left: 75px; top: 0; }    /* Home plate */
