@@ -4,14 +4,14 @@ body {
 }
 
 table {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
 }
 
 th, td {
     border: 1px solid black;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
 }
 
@@ -25,24 +25,20 @@ td:hover {
 }
 
 /* Baseball Diamond */
-#diamond {
-    width: 200px;
-    height: 200px;
+.diamond {
     position: relative;
-    margin: 20px auto;
-}
-
-.base {
     width: 50px;
     height: 50px;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background-color: #f9f9f9;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid black;
+    border-radius: 50%;
+    font-size: 14px;
+    background-color: #fff;
 }
 
-.base1 { left: 75px; bottom: 0; } /* First base */
-.base2 { right: 0; top: 75px; }  /* Second base */
-base3 { left: 0; top: 75px; }   /* Third base */
-.home { left: 75px; top: 0; }    /* Home plate */
+.diamond:hover {
+    background-color: #cfcfcf;
+}
