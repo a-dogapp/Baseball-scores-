@@ -1,5 +1,11 @@
 function addPlayer() {
     let tableBody = document.getElementById("scorecard-body");
+    
+    if (!tableBody) {
+        console.error("Error: #scorecard-body not found!");
+        return;
+    }
+
     let newRow = document.createElement("tr");
 
     let playerCell = document.createElement("td");
@@ -30,16 +36,4 @@ function addPlayer() {
     });
 
     tableBody.appendChild(newRow);
-}
-
-function editDiamond(element) {
-    let action = prompt("Enter action: (K = Strikeout, HR = Home Run, 1B = Single, etc.)");
-    if (action) {
-        element.innerText = action;
-    }
-}
-
-function resetScorecard() {
-    let cells = document.querySelectorAll("#scorecard-body td, .diamond");
-    cells.forEach(cell => cell.innerText = "");
 }
