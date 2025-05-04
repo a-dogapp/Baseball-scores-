@@ -1,7 +1,21 @@
-function updateScore() {
-    let teamAScore = document.getElementById("teamA-1");
-    let teamBScore = document.getElementById("teamB-1");
+function addPlayer() {
+    let tableBody = document.getElementById("scorecard-body");
+    let newRow = document.createElement("tr");
 
-    teamAScore.innerText = parseInt(teamAScore.innerText) + 1;  // Increase Team A's score
-    teamBScore.innerText = parseInt(teamBScore.innerText) + 1;  // Increase Team B's score
+    let playerCell = document.createElement("td");
+    playerCell.innerText = "Player " + (tableBody.children.length + 1);
+    newRow.appendChild(playerCell);
+
+    for (let i = 0; i < 9; i++) {
+        let cell = document.createElement("td");
+        cell.onclick = function() {
+            let action = prompt("Enter action: (K = Strikeout, HR = Home Run, 1B = Single, etc.)");
+            if (action) {
+                cell.innerText = action;
+            }
+        };
+        newRow.appendChild(cell);
+    }
+
+    tableBody.appendChild(newRow);
 }
