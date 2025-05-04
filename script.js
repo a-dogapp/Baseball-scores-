@@ -19,3 +19,8 @@ function addPlayer() {
 
     tableBody.appendChild(newRow);
 }
+
+function resetScorecard() {
+    let cells = document.querySelectorAll("#scorecard-body td");
+    cells.forEach(cell => cell.innerText = ""); // Clears all scores
+}
