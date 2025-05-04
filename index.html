@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baseball Scorebook</title>
+    <title>Baseball Scorecard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Baseball Scorebook</h1>
+    <h1>Baseball Scorecard</h1>
+    
+    <!-- Scorecard Table -->
     <table>
-        <tr>
-            <th>Inning</th>
-            <th>Team A</th>
-            <th>Team B</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td id="teamA-1">0</td>
-            <td id="teamB-1">0</td>
-        </tr>
-        <!-- Add more rows for more innings -->
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Position</th>
+                <th>1st</th>
+                <th>2nd</th>
+                <th>3rd</th>
+                <th>4th</th>
+                <th>5th</th>
+                <th>6th</th>
+                <th>7th</th>
+                <th>8th</th>
+                <th>9th</th>
+                <th>AB</th>
+                <th>R</th>
+                <th>H</th>
+                <th>RBI</th>
+                <th>SO</th>
+                <th>BB</th>
+            </tr>
+        </thead>
+        <tbody id="scorecard-body">
+            <!-- Player rows will be dynamically added -->
+        </tbody>
     </table>
-    <button onclick="updateScore()">Update Score</button>
+
+    <button onclick="addPlayer()">Add Player</button>
+    <button onclick="resetScorecard()">Reset Scorecard</button>
+
     <script src="script.js"></script>
 </body>
 </html>
