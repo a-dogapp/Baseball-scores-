@@ -1,0 +1,26 @@
+function addPlayer() {
+    let tableBody = document.getElementById("scorecard-body");
+    let newRow = document.createElement("tr");
+
+    let playerCell = document.createElement("td");
+    playerCell.innerText = "Player " + (tableBody.children.length + 1);
+    newRow.appendChild(playerCell);
+
+    for (let i = 0; i < 9; i++) {
+        let cell = document.createElement("td");
+        cell.onclick = function() {
+            let action = prompt("Enter action: (K = Strikeout, HR = Home Run, 1B = Single, etc.)");
+            if (action) {
+                cell.innerText = action;
+            }
+        };
+        newRow.appendChild(cell);
+    }
+
+    tableBody.appendChild(newRow);
+}
+
+function resetScorecard() {
+    let cells = document.querySelectorAll("#scorecard-body td");
+    cells.forEach(cell => cell.innerText = ""); // Clears all scores
+}
