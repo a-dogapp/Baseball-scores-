@@ -4,14 +4,14 @@ body {
 }
 
 table {
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
     border-collapse: collapse;
 }
 
 th, td {
     border: 1px solid black;
-    padding: 8px;
+    padding: 6px;
     text-align: center;
 }
 
@@ -24,18 +24,18 @@ td:hover {
     background-color: #ddd;
 }
 
-/* Baseball Diamond */
+/* Editable Baseball Diamond */
 .diamond {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid black;
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 12px;
     background-color: #fff;
 }
 
